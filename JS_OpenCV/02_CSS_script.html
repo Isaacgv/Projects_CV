@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Etiquetas basicas</title>
+    <style>
+        .correcto{
+            color: #00ff00;
+            font-size:18px;
+            background-color: #333333;
+        }
+        #error {
+            color:#ff0000;
+            font-size:12px;
+            background-color: yellow;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo principal</h1><!--Hay seis niveles de titulos-->
+    <h6>Titulo ultimo nivel</h6>
+    <p>Parrafo normal</p>
+
+    <p class="correcto">Color verde</p>
+    <p id="error">Representa un error</p>
+
+
+    <script>
+        //cambio de color de fondo
+        document.getElementById("error").style.color ="#00FF00";
+        //otro ejemplo de cambio de color
+        var x = document.getElementById("error")
+        x.style.fontSize = "30px";
+        x.style.backgroundColor="#999999"
+
+        //Cambio de texto
+        document.getElementsByTagName("h1")[0].innerHTML = "cambio de texto";
+        
+        var y = document.getElementsByClassName("correcto")[0];
+     
+        //manda la variable qa la consola
+        console.log(y)
+        y.style.textAlingn = "right";
+    </script>
+</body>
+</html>
+

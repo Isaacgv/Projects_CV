@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="status">Opencv.js is loading..</p>
+<img id="canvasInput" width="400" height="400" src="new.jpg"/>
+<canvas  id="canvasOutput" width="400" height="400" style="border:2px solid #d3d3d3">
+</canvas>
+
+<script type="text/javascript">
+function onOpenCvReady() {
+ 
+    document.getElementById("status").innerHTML = "OpenCV.js is ready";
+    
+    let src = cv.imread("canvasInput")
+    //let dst = new cv.Mat(); 
+   
+    //cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY );
+    cv.imshow("canvasOutput", src);
+    document.getElementById("status").innerHTML = "Op";
+    //src.delete();
+    //dst.delete();
+
+}    
+</script>
+
+<script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</body>
+</html>

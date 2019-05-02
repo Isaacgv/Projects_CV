@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<h3>Acceso a imagenes</h3>
+
+<img id="persona" src ="persona.jpg" width="200px" alt="No hay imagen">
+
+<button onclick ="copia_img()">Copia img, escala y redondea esquinas</button>
+<br>
+
+<img id="demo"></img>
+<div id="new"></div>
+
+<script>
+function copia_img(){
+    var url_persona = document.getElementById("persona").src
+    var destino = document.getElementById("demo")
+    destino.style.width ="100px"
+    destino.style.border = "1px"
+    destino.style.borderRadius = "8px"
+    destino.src = url_persona
+}
+</script>
+
+<!--add new image when finish load javascript -->
+<script>
+window.onload = function(){
+    var node = document.createElement("IMG");
+    node.setAttribute("src", "new.jpg");
+    node.setAttribute("width", "300");
+    node.setAttribute("alt","nueva imagen");
+    document.getElementById("new").appendChild(node);
+}
+</script>
+
+</body>
+</html>

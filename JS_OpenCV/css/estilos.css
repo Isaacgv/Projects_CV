@@ -1,0 +1,12 @@
+.correcto{
+    color: #00ff00;
+    font-size:18px;
+    background-color: #333333;
+}
+
+#error {
+    color:#ff0000;
+    font-size:12px;
+    background-color: yellow;
+    margin-left: 30px;
+}
